@@ -13,7 +13,7 @@ startWatch();
 //måler acceleration i bestemte intervaller
 function startWatch() {
 var options = { frequency: 5 };//vis værdi hvert sekund
-watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options); //
+watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options); 
 }
 
 function stopWatch() {
@@ -25,13 +25,13 @@ watchID = null;
 
 function onSuccess(acceleration) {
 //Gem sensorværdier
-var accX = acceleration.x ;
+var accX = acceleration.x;
 var accY = acceleration.y;
 var accZ = acceleration.z;
 var timestamp = acceleration.timestamp;
 //Udskriv værdier i div med navnet accelerometer
 document.getElementById('accelerometer').innerHTML = 
-'Acceleration X: ' + accX + '<br/>' +
+'Acceleration X: ' + accX + '<br />' +
 'Acceleration Y: ' + accY + '<br />' +
 'Acceleration Z: ' + accZ + '<br />' +
 'Timestamp: ' + timestamp + '<br />';
